@@ -1,0 +1,14 @@
+syntax = "proto3"; //Specify proto3 version.
+ 
+package greeter; //Optional: unique package name.
+ 
+service Greeter { //Service class to be used by the clients
+  rpc sayHello(SayHelloRequest) returns (SayHelloResponse){}
+}
+ 
+message SayHelloRequest { 
+  string user = 1;
+}
+message SayHelloResponse { 
+  string message = 1;
+}
